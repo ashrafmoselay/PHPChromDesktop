@@ -1,0 +1,1597 @@
+<!DOCTYPE html>
+<html dir="rtl">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>
+        سهل للحسابات    </title>
+    <!-- Tell the browser to be responsive to screen width -->
+    
+
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="theme-color" content="#ffffff">
+
+    <meta name="mobile-web-app-title" content="SAHAL" />
+
+    <link rel="shortcut icon" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="shortcut icon" sizes="196x196" href="/android-chrome-192x192.png">
+    <link rel="apple-touch-icon-precomposed" href="/apple-touch-icon.png">
+
+    <link rel="manifest" href="/manifest.json" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="mobile-web-app-status-bar-style" content="black" />
+    <!-- Bootstrap 3.3.6 -->
+
+    
+    <link rel="stylesheet" href="http://127.0.0.1:54007/front/bootstrap/css/animate.css">
+    <link rel="stylesheet" href="http://127.0.0.1:54007/front/bootstrap/css/bootstrapValidator.min.css">
+
+    <!-- daterange picker -->
+    <link rel="stylesheet" href="http://127.0.0.1:54007/front/plugins/daterangepicker/daterangepicker.css">
+    <!-- bootstrap datepicker -->
+    <link rel="stylesheet" href="http://127.0.0.1:54007/front/plugins/datepicker/datepicker3.css">
+    <!-- iCheck for checkboxes and radio inputs -->
+    <link rel="stylesheet" href="http://127.0.0.1:54007/front/plugins/iCheck/all.css">
+    <!-- Bootstrap Color Picker -->
+    <link rel="stylesheet" href="http://127.0.0.1:54007/front/plugins/colorpicker/bootstrap-colorpicker.min.css">
+    <!-- Bootstrap time Picker -->
+    <link rel="stylesheet" href="http://127.0.0.1:54007/front/plugins/timepicker/bootstrap-timepicker.min.css">
+    <!-- Select2 -->
+    <link rel="stylesheet" href="http://127.0.0.1:54007/front/plugins/select2/select2.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="http://127.0.0.1:54007/front/dist/css/font-awesome.min.css">
+    <!-- Ionicons -->
+    <link rel="stylesheet" href="http://127.0.0.1:54007/front/dist/css/ionicons.min.css">
+
+
+    <!-- AdminLTE Skins. Choose a skin from the css/skins
+         folder instead of downloading all of them to reduce the load. -->
+    <link rel="stylesheet" href="http://127.0.0.1:54007/front/dist/css/skins/_all-skins.min.css">
+    <link rel="stylesheet" href="http://127.0.0.1:54007/front/toastr/toastr.min.css">
+    <link rel="stylesheet" href="http://127.0.0.1:54007/front/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="http://127.0.0.1:54007/front/plugins/datatables2/dataTables.bootstrap.css">
+    <link rel="stylesheet" href="http://127.0.0.1:54007/front/plugins/datatables2/buttons.dataTables.min.css">
+    <link rel="stylesheet" href="http://127.0.0.1:54007/front/plugins/datatables2/fixedHeader.bootstrap.min.css">
+    <link rel="stylesheet" href="http://127.0.0.1:54007/front/plugins/datatables2/responsive.bootstrap.min.css">
+
+    <!-- Theme style -->
+    <link rel="stylesheet" href="http://127.0.0.1:54007/front/dist/css/AdminLTE.min.css">
+            <link rel="stylesheet" href="http://127.0.0.1:54007/front/bootstrap/css/bootstrap-rtl.min.css">
+        <link rel="stylesheet" href="http://127.0.0.1:54007/front/dist/css/AdminLTE-rtl.min.css">
+        
+    <link rel="stylesheet" href="http://127.0.0.1:54007/front/sweetalert.css">
+            <style>
+            @media  print {
+                table {
+                    max-width: 100% !important;
+                }
+
+                .printHeader {
+                    display: block !important;
+                }
+
+                .table-bordered {
+                    margin-bottom: 0px !important;
+                }
+
+                a[href]:after {
+                    content: none !important;
+                }
+
+                .main-footer,
+                .dt-buttons,
+                .dataTables_filter {
+                    display: none;
+                }
+
+                #footer {
+                    visibility: visible;
+                }
+
+                a {
+                    visibility: hidden;
+                }
+
+                .box {
+                    border-top: none !important;
+                }
+
+                .table {
+                    border: 1px solid #020202 !important;
+                }
+
+                .table td,
+                .table th {
+                    border: 1px solid #020202 !important;
+                }
+
+                @media  print {
+                    .printHeader {
+                        display: block !important;
+                    }
+
+                    table {
+                        font-size: 13px !important;
+                        page-break-after: auto;
+                    }
+
+                    tr {
+                        page-break-inside: avoid;
+                        page-break-after: auto
+                    }
+
+                    td {
+                        page-break-inside: avoid;
+                        page-break-after: auto
+                    }
+
+                    thead {
+                        display: table-header-group;
+                        page-break-inside: avoid;
+                    }
+
+                    tfoot {
+                        display: table-footer-group
+                    }
+
+                    .panel-default {
+                        border: none;
+                    }
+
+                    .hideprint {
+                        visibility: hidden;
+                        margin: 0;
+                    }
+                }
+
+                .dataTables_length,
+                .box-tools,
+                .dataTables_info,
+                .table.dataTable thead .sorting:after,
+                .table.dataTable thead .sorting:after,
+                table.dataTable thead .sorting_asc:after,
+                table.dataTable thead .sorting_desc:after {
+                    display: none !important;
+                }
+
+                .table>caption+thead>tr:first-child>th,
+                .table>colgroup+thead>tr:first-child>th,
+                .table>thead:first-child>tr:first-child>th,
+                .table>caption+thead>tr:first-child>td,
+                .table>colgroup+thead>tr:first-child>td,
+                .table>thead:first-child>tr:first-child>td {
+                    text-align: center;
+                }
+
+                html,
+                body {
+                    height: max-content;
+                    width: 100vh;
+                    margin: 0 !important;
+                    padding: 0 !important;
+                }
+
+            }
+        </style>
+        <style>
+        .shipmentCompany {
+            display: none
+        }
+
+        .tfawdshow {
+            display: none
+        }
+
+        .dataTables_processing {
+            font-size: 30px !important;
+            font-weight: bold;
+            color: #4267b2;
+        }
+
+        .table {
+            border: 1px solid #020202 !important;
+
+        }
+
+        .table td,
+        .table th {
+            border: 1px solid #020202 !important;
+        }
+
+        .table thead tr>td {
+            text-align: center !important;
+            vertical-align: middle !important;
+        }
+
+        a:hover {
+            text-decoration: none;
+        }
+
+        @media  print {
+            .hideprint {
+                visibility: hidden;
+                display: none;
+                margin: 0;
+            }
+
+            #footer,
+            footer {
+                display: none;
+                margin: 0
+            }
+
+            tfoot tr td {
+                border: none !important;
+            }
+        }
+
+        div.dataTables_paginate {
+            text-align: left;
+        }
+
+        .datepicker.dropdown-menu {
+            right: initial;
+        }
+
+        .modal-open .select2-dropdown {
+            z-index: 10060;
+        }
+
+        .modal-open .select2-close-mask {
+            z-index: 10055;
+        }
+
+        .unitclass {
+            width: 100%;
+            border: none;
+            background: transparent;
+            padding: 0 8px;
+            outline: 0;
+        }
+
+        .unit.input-group-addon:last-child {
+            padding: 0;
+            min-width: 80px;
+        }
+
+        .sidebar-menu .treeview-menu li.active {
+            background-color: #3c763c;
+        }
+
+        .modal-fullscreen .modal-dialog {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+        .modal-fullscreen .modal-content {
+            height: auto;
+            min-height: 100%;
+            border: 0 none;
+            border-radius: 0;
+        }
+
+        .slimScrollBar {
+            width: 8px !important;
+            background: #3c8dbc !important;
+
+
+        }
+
+        /*div#dataList_wrapper div#dataList_filter{
+            position: absolute;
+            top: 0.6%;
+            right: 20%;
+        }
+        .dataTables_wrapper .dataTables_filter {
+            position: absolute;
+            top: 1%;
+            right: 23%;
+        }*/
+
+
+        .tt-dataset.tt-dataset-products {
+            z-index: 10000;
+            overflow: scroll;
+            width: 750px;
+            background: #eee;
+            font-weight: bold;
+        }
+
+        aside.main-sidebar {
+            overflow: hidden !important;
+            overflow-y: auto !important;
+            height: 100vh;
+        }
+
+        .s-header {
+            background: #337ab7;
+            color: #fefefe;
+            font-weight: bold;
+        }
+
+        .s-row {
+            display: table-row;
+        }
+
+        .s-cell {
+            display: table-cell;
+            padding: 5px;
+            border: 1px solid black;
+        }
+
+        .tt-menu {
+            width: auto;
+        }
+
+        .tt-dataset {
+            display: table;
+            width: 700px !important;
+            z-index: 100000;
+        }
+
+        .loader {
+            position: relative;
+            float: left;
+            z-index: 1000;
+            color: #3c8dbc;
+            font-size: 30px !important;
+            left: 60px;
+        }
+
+        .table td.fit,
+        .table th.fit {
+            white-space: nowrap;
+            width: 1%;
+        }
+    </style>
+        <style>
+        .tt-menu {
+            max-height: 500px !important;
+            overflow-x: hidden !important;
+            overflow-y: auto !important;
+            width: 720px !important;
+            background-color: #ffffff !important;
+            right: -50px !important;
+        }
+    </style>
+    <style>
+    .skin-blue .main-header .logo,
+    .skin-blue .main-header .navbar,.main-header{
+        background-color: #4267b2;
+    }
+    .skin-blue .main-header .logo:hover,
+    .skin-blue .main-header .navbar .sidebar-toggle:hover {
+        background: rgba(0, 0, 0, 0.1);
+        color: #f6f6f6;
+    }
+
+</style>
+    <style>
+        button#pdf-button {
+            margin-left: 10px;
+        }
+
+        @media  print {
+
+            ::-webkit-scrollbar {
+                display: none;
+            }
+
+            @page  {
+                size: auto;
+                height: auto;
+                margin: 5mm 0 5mm 0;
+                padding: 0cm !important;
+                counter-increment: page;
+                counter-reset: page 1;
+                page-break-after: always;
+                overflow: hidden;
+            }
+
+            body {
+                margin: 0;
+                overflow: hidden;
+            }
+
+            #page-footer::before {
+                content: "Page " counter(page);
+                display: block;
+                text-align: center;
+            }
+
+            #page-footer a {
+                display: none;
+            }
+
+            .content-wrapper {
+                width: 100%;
+                margin-right: 10px;
+            }
+
+            .col-md-1,
+            .col-md-2,
+            .col-md-3,
+            .col-md-4,
+            .col-md-5,
+            .col-md-6,
+            .col-md-7,
+            .col-md-8,
+            .col-md-9,
+            .col-md-10,
+            .col-md-11,
+            .col-md-12 {
+                float: right;
+            }
+
+            .col-md-1 {
+                width: 8%;
+            }
+
+            .col-md-2 {
+                width: 16%;
+            }
+
+            .col-md-3 {
+                width: 25%;
+            }
+
+            .col-md-4 {
+                width: 33%;
+            }
+
+            .col-md-5 {
+                width: 42%;
+            }
+
+            .col-md-6 {
+                width: 50%;
+            }
+
+            .col-md-7 {
+                width: 58%;
+            }
+
+            .col-md-8 {
+                width: 66%;
+            }
+
+            .col-md-9 {
+                width: 75%;
+            }
+
+            .col-md-10 {
+                width: 83%;
+            }
+
+            .col-md-11 {
+                width: 92%;
+            }
+
+            .col-md-12 {
+                width: 100%;
+            }
+
+        }
+
+        @media (max-width:700px) {
+            .modal-lg.modal-dialog.animated.undefined {
+                overflow-x: auto;
+                max-height: 500px;
+            }
+        }
+        .model{
+            overflow-x: auto!important;
+        }
+    </style>
+</head>
+<body class="hold-transition skin-blue sidebar-mini">
+    
+    <div class="wrapper">
+
+        <header class="main-header">
+
+    <!-- Logo -->
+    <a href="http://127.0.0.1:54007" class="logo">
+        <!-- mini logo for sidebar mini 50x50 pixels -->
+        <span class="logo-mini"><b>S</b>AM</span>
+        <!-- logo for regular state and mobile devices -->
+        <span class="logo-lg">
+            <b>سهل للحسابات</b>
+        </span>
+    </a>
+
+    <!-- Header Navbar: style can be found in header.less -->
+    <nav class="navbar navbar-static-top">
+        <!-- Sidebar toggle button-->
+        <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
+            <span class="sr-only">Toggle navigation</span>
+        </a>
+                <h4 class="inline" style="color: white; position: relative;top: 14px;">ناصـــر لاستيراد وتجارة الأدوات الصحية  أولاد الحاج/ عصــــام الشنـاوي</h4>
+        <!-- Navbar Right Menu -->
+        <div class="navbar-custom-menu">
+            <ul class="nav navbar-nav">
+                <!-- User Account: style can be found in dropdown.less -->
+                <li class="dropdown messages-menu">
+                    <a href="http://127.0.0.1:54007/setLang/en">
+                        <i class="fa fa-globe"></i>
+                        <span class="label label-success">EN</span>
+                    </a>
+                </li>
+                <li class="dropdown messages-menu">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                        <i class="fa fa-gg"></i>
+                        <span class="label label-success">ج.م</span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <ul class="menu">
+                                                                    <li>
+                                        <a href="http://127.0.0.1:54007?currency=EGP">
+                                            جنبه مصرى
+                                        </a>
+                                    </li>
+                                                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li class="dropdown notifications-menu">
+    <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+        <i class="fa fa-bell-o"></i>
+        <span class="label label-warning">0</span>
+    </a>
+    <ul class="dropdown-menu">
+        <li class="header">التنبيهات</li>
+        <li>
+            <ul style="font-size: 12px;" class="menu">
+                                            </ul>
+        </li>
+    </ul>
+</li>
+
+                <li class="dropdown user user-menu">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                        <img style="margin-left: 5px;" src="http://127.0.0.1:54007/defaut.jpg" class="user-image" alt="User Image">
+                        <span class="hidden-xs"> أشرف </span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <!-- User image -->
+                        <li class="user-header">
+                            <img src="http://127.0.0.1:54007/defaut.jpg" class="img-circle" alt="User Image">
+
+                            <p>
+                                أشرف
+                                <small>عضو منذ 14-02-2019</small>
+                            </p>
+                        </li>
+                        <!-- Menu Footer-->
+                        <li class="user-footer">
+                            <div class="pull-left">
+                                                                    <a data-toggle="modal" data-target="#addPersonModal" href="http://127.0.0.1:54007/users/1/edit"
+                                    class="btn btn-default btn-flat">
+                                        <i class="fa fa-pencil fa-fw" aria-hidden="true"></i>
+                                        <span class="hidden-xs">حسابى</span>
+                                    </a>
+                                                            </div>
+                            <div class="pull-right">
+                                <a class="btn btn-danger btn-flat" title="خروج" href="http://127.0.0.1:54007/logout"
+                                   onclick="event.preventDefault();
+                                             document.getElementById('logout-form').submit();">
+                                    <i class="fa fa-sign-out" aria-hidden="true"></i>
+                                    خروج                                </a>
+
+                                <form id="logout-form" action="http://127.0.0.1:54007/logout" method="POST" style="display: none;">
+                                    <input type="hidden" name="_token" value="QB8b7nlKTbUpFUSANl6BgrI4ig7SxJtRpZvwyp9m">
+                                </form>
+                            </div>
+                        </li>
+                    </ul>
+                </li>
+                <!-- Messages: style can be found in dropdown.less-->
+                <li class="dropdown messages-menu">
+                    <a href="javascript:void(0)" onclick="window.location.reload()">
+                        <i class="fa fa-refresh"></i>
+                    </a>
+                </li>
+                <!-- Notifications: style can be found in dropdown.less -->
+                <li class="dropdown notifications-menu">
+                    <a href="javascript:void(0)" onclick="history.forward()">
+                        <i class="fa fa-arrow-right"></i>
+                    </a>
+                </li>
+                <!-- Tasks: style can be found in dropdown.less -->
+                <li class="dropdown tasks-menu">
+                    <a href="javascript:void(0)" onclick="history.back()">
+                        <i class="fa  fa-arrow-left"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+    </nav>
+</header>
+
+        <!-- Left side column. contains the logo and sidebar -->
+<aside class="main-sidebar">
+    <!-- sidebar: style can be found in sidebar.less -->
+    <section class="sidebar">
+        <!-- Sidebar user panel -->
+        
+        <!-- search form -->
+        <form action="#" method="get" class="sidebar-form">
+            <div class="input-group">
+                <input autocomplete="off" type="text" name="q" class="form-control"
+                    placeholder="البحث">
+                <span class="input-group-btn">
+                    <button type="submit" name="search" id="search-btn" class="btn btn-flat"><i
+                            class="fa fa-search"></i>
+                    </button>
+                </span>
+            </div>
+        </form>
+        <!-- /.search form -->
+        <!-- sidebar menu: : style can be found in sidebar.less -->
+        <ul class="sidebar-menu">
+            <li class="header">القائمة</li>
+            <li id="homeLi"><a href="http://127.0.0.1:54007"><i class="fa  fa-home"></i><span>الرئيسية</span>
+                </a></li>
+                                                                                        <li><a target="_blank" href="http://127.0.0.1:54007/order/create?notpopup=yes"><i
+                            class="fa  fa-calculator"></i><span>نقطة بيع منفصلة</span> </a></li>
+                                        <li><a href="http://127.0.0.1:54007/clients"><i class="fa fa-users"></i> قائمة العملاء</a></li>
+                <li><a href="http://127.0.0.1:54007/suppliers"><i class="fa fa-truck"></i>قائمة الموردين </a></li>
+                                        <li><a href="http://127.0.0.1:54007/order/create?notpopup=yes"><i
+                            class="fa  fa-calculator"></i><span>نقطة بيع</span> </a></li>
+                                        <li><a href="http://127.0.0.1:54007/purchase/create?notpopup=yes"><i class="fa  fa-truck"></i><span>
+                            نقطة شراء</span> </a></li>
+                                                    <li class="treeview">
+                    <a href="#">
+                        <i class="fa fa-barcode"></i>
+                        <span>اﻷصناف</span>
+                        <span class="pull-right-container">
+                            <i class="fa fa-angle-left pull-right"></i>
+                        </span>
+                    </a>
+                    <ul class="treeview-menu">
+                                                <li><a href="http://127.0.0.1:54007/products"><i class="fa fa-th"></i> اﻷصناف</a>
+                        </li>
+                                                                            <li><a href="http://127.0.0.1:54007/products/generateBarCode"><i class="fa fa-barcode"></i>
+                                    باركود اﻷصناف</a></li>
+                                                                                                <li><a href="http://127.0.0.1:54007/products/priceList"><i class="fa fa-money"></i> عرض سعر                            </a></li>
+                        <li><a href="http://127.0.0.1:54007/products/priceList2"><i class="fa fa-money"></i> عرض اسعار مفصل                            </a></li>
+                        <li><a href="http://127.0.0.1:54007/offers"><i class="fa fa-money"></i> عرض سعر كفاتورة                            </a></li>
+                    </ul>
+                </li>
+                                        <li class="treeview">
+                    <a href="#">
+                        <i class="fa fa-users"></i> <span>الاشخاص</span>
+                        <span class="pull-right-container">
+                            <i class="fa fa-angle-left pull-right"></i>
+                        </span>
+                    </a>
+                    <ul class="treeview-menu">
+                                                    <li><a href="http://127.0.0.1:54007/clients"><i class="fa fa-users"></i>
+                                    قائمة العملاء</a></li>
+                                                <li><a href="http://127.0.0.1:54007/instalments-list"><i class="fa  fa-money"></i>
+                                اﻷقساط</a></li>
+                        <li><a href="http://127.0.0.1:54007/clients/1"><i
+                                    class="fa fa-calendar-minus-o"></i> قائمة عملاء الآجل</a></li>
+                        <li><a href="http://127.0.0.1:54007/persons/list/payments/2023-12-17"><i
+                                    class="fa fa-money"></i> مدفوعات العملاء</a></li>
+
+                        <li><a href="http://127.0.0.1:54007/suppliers"><i class="fa fa-truck"></i>قائمة الموردين </a>
+                        </li>
+                        <li><a href="http://127.0.0.1:54007/suppliers?isdebt=1"><i
+                                    class="fa fa-truck"></i>قائمة موردين الآجل </a></li>
+                        <li><a href="http://127.0.0.1:54007/employees"><i class="fa fa-user"></i> قائمة الموظفين</a>
+                        </li>
+                        <li><a href="http://127.0.0.1:54007/partners"><i class="fa fa-paw"></i> الشركاء </a>
+                        </li>
+
+                    </ul>
+                </li>
+                                        <li class="treeview">
+                    <a href="#">
+                        <i class="fa fa-list-alt"></i>
+                        <span>الفواتير</span>
+                        <span class="pull-right-container">
+                            <i class="fa fa-angle-left pull-right"></i>
+                        </span>
+                    </a>
+                    <ul class="treeview-menu">
+                                                    <li><a href="http://127.0.0.1:54007/orders"><i class="fa fa-line-chart"></i>
+                                    فواتير المبيعات</a></li>
+                            <li><a href="http://127.0.0.1:54007/orders/getDetails"><i class="fa fa-search-plus"></i>
+                                    تفاصيل المبيعات</a></li>
+                            <li><a href="http://127.0.0.1:54007/ordersReturn"><i class="fa fa-share-square-o"></i>
+                                    مرتجعات المبيعات</a></li>
+                                                                            <li><a href="http://127.0.0.1:54007/purchases"><i
+                                        class="fa fa-calendar-check-o"></i> فواتير المشتريات</a></li>
+                            <li><a href="http://127.0.0.1:54007/purchasesReturn"><i class="fa fa-share-square"></i>
+                                    مرتجعات المشتريات</a></li>
+                            <li><a href="http://127.0.0.1:54007/persons/getClientSupplier"><i
+                                        class="fa fa-desktop"></i>كشف حساب عميل ومورد</a></li>
+                                            </ul>
+                </li>
+                                        <li class="treeview">
+                    <a href="#">
+                        <i class="fa fa-money"></i>
+                        <span>المالية</span>
+                        <span class="pull-right-container">
+                            <i class="fa fa-angle-left pull-right"></i>
+                        </span>
+                    </a>
+                    <ul class="treeview-menu">
+                                                    <li><a href="http://127.0.0.1:54007/transaction/payment/client"><i class="fa fa-money"></i>
+                                    سند قبض</a></li>
+                                                                            <li><a href="http://127.0.0.1:54007/transaction/payment/supplier"><i
+                                        class="fa fa-money"></i> سند صرف</a></li>
+                                                                            <li><a href="http://127.0.0.1:54007/expenses"><i class="fa fa-money"></i>
+                                    المصروفات</a></li>
+                                                                            <li><a href="http://127.0.0.1:54007/banks/index/2"><i
+                                        class="fa fa-money"></i>الخزنة</a></li>
+                                                                        <li><a href="http://127.0.0.1:54007/currencies"><i
+                                    class="fa fa-bitcoin"></i>العملة</a></li>
+                    </ul>
+                </li>
+            
+                            <li class="treeview">
+                    <a href="#">
+                        <i class="fa fa-file"></i>
+                        <span>التقارير</span>
+                        <span class="pull-right-container">
+                            <i class="fa fa-angle-left pull-right"></i>
+                        </span>
+                    </a>
+                    <ul class="treeview-menu">
+                        <li><a href="http://127.0.0.1:54007/order/report"><i class="fa fa-line-chart"></i>
+                                تقرير المبيعات</a></li>
+                        <li><a href="http://127.0.0.1:54007/purchase/report"><i class="fa fa-file"></i>
+                                تقرير المشتريات</a></li>
+                        <li><a href="http://127.0.0.1:54007/expenses/report"><i class="fa fa-money"></i>
+                                تقرير المصروفات</a></li>
+                        <li><a href="http://127.0.0.1:54007/ordersReturn"><i class="fa fa-share-square-o"></i>
+                                مرتجعات المبيعات</a></li>
+                        <li><a href="http://127.0.0.1:54007/generaltaxreturnreport/report?fromdate=2023-12-01"><i
+                                    class="fa fa-file"></i> تقرير عام الاقرار الضريبي</a></li>
+                        <li><a href="http://127.0.0.1:54007/purchasesReturn"><i class="fa fa-share-square"></i>
+                                مرتجعات المشتريات</a></li>
+                        <li><a href="http://127.0.0.1:54007/persons/getClientSupplier"><i
+                                    class="fa fa-desktop"></i>كشف حساب عميل ومورد</a></li>
+                        <li><a href="http://127.0.0.1:54007/dailyreport?fromdate=2023-12-17"><i
+                                    class="fa fa-calendar-check-o"></i>كشف اليومية</a></li>
+                        <li><a href="http://127.0.0.1:54007/profit"><i class="fa fa-line-chart"></i> تقرير اﻷرباح</a>
+                        </li>
+                        <li><a href="http://127.0.0.1:54007/gprofit"><i class="fa fa-line-chart"></i>تقرير الأرباح الفعلى</a>
+                        </li>
+                        <li><a href="http://127.0.0.1:54007/products/report"><i
+                                    class="fa fa-barcode"></i> تقرير اﻷصناف</a></li>
+                        <li><a href="http://127.0.0.1:54007/products/report?is_service=1"><i
+                                    class="fa fa-fax"></i>تقرير الخدمات</a></li>
+                        <li><a href="http://127.0.0.1:54007/products/getCriticalQuantity"><i class="fa fa-battery-1"></i>
+                                الأصناف الناقصة</a></li>
+                        <li><a href="http://127.0.0.1:54007/regionsReport"><i class="fa fa-area-chart"></i>
+                                 تقرير المناطق</a></li>
+                        <li>
+                            <a class="hide" href="http://127.0.0.1:54007/representativesReport"><i
+                                    class="fa fa-truck"></i> مديونيات المندوبين </a>
+                            <a href="http://127.0.0.1:54007/salesmanreport"><i class="fa fa-truck"></i> تقرير
+                                المناديب</a>
+                        </li>
+                        <li>
+                            <a href="http://127.0.0.1:54007/representativesSalesReport"><i class="fa fa-truck"></i>
+                                مبيعات المندوبين</a>
+                        </li>
+
+
+                                                <li>
+                            <a href="http://127.0.0.1:54007/summery"><i class="fa fa-file"></i> تقرير ملخص</a>
+                        </li>
+                        <li><a href="http://127.0.0.1:54007/logs"><i class="fa fa-history"></i>سجل النشاطات</a></li>
+
+                    </ul>
+                </li>
+            
+                            <li class="treeview">
+                    <a href="#">
+                        <i class="fa fa-lock"></i>
+                        <span>المستخدمين والصلاحيات</span>
+                        <span class="pull-right-container">
+                            <i class="fa fa-angle-left pull-right"></i>
+                        </span>
+                    </a>
+                    <ul class="treeview-menu">
+                                                    <li><a href="http://127.0.0.1:54007/roles"><i
+                                        class="fa fa-user-secret"></i>الصلاحيات</a></li>
+                                                                            <li><a href="http://127.0.0.1:54007/users"><i
+                                        class="fa fa-users"></i>المستخدمين</a></li>
+                                            </ul>
+                </li>
+            
+                            <li class="treeview">
+                    <a href="#">
+                        <i class="fa fa-book"></i>
+                        <span>تعريفات النظام</span>
+                        <span class="pull-right-container">
+                            <i class="fa fa-angle-left pull-right"></i>
+                        </span>
+                    </a>
+                    <ul class="treeview-menu">
+                        <li>
+                            <a href="http://127.0.0.1:54007/regions"><i class="fa fa-map-marker"></i>
+                                المناطق</a>
+                        </li>
+                                                    <li><a href="http://127.0.0.1:54007/units"><i class="fa fa-cubes"></i>
+                                    الوحدات</a></li>
+                                                                                                    <li><a href="http://127.0.0.1:54007/category"><i
+                                        class="fa fa-qrcode"></i>الفئات</a></li>
+                                                                            <li><a href="http://127.0.0.1:54007/expensesType"><i class="fa fa-money"></i>
+                                    انواع المصاريف</a></li>
+                                                                    </ul>
+                </li>
+            
+
+                            <li class="treeview">
+                    <a href="#">
+                        <i class="fa fa-cogs"></i>
+                        <span>الإعدادات</span>
+                        <span class="pull-right-container">
+                            <i class="fa fa-angle-left pull-right"></i>
+                        </span>
+                    </a>
+                    <ul class="treeview-menu">
+                        <li><a href="http://127.0.0.1:54007/setting"><i class="fa fa-cog"></i>الإعدادات</a>
+                        </li>
+                        <li><a href="http://127.0.0.1:54007/backup"><i class="fa fa-database"></i>نسخة إحتياطية من البيانات</a></li>
+                        <li><a href="http://127.0.0.1:54007/restore"><i class="fa fa-database"></i>استرجاع البيانات</a>
+                        </li>
+                        <li><a class="showAlertWarning" href="http://127.0.0.1:54007/closeYear"><i
+                                    class="fa fa-calendar"></i>التقفيل السنوى</a></li>
+                        <li><a href="http://127.0.0.1:54007/clearCache"><i class="fa fa-eraser"></i>مسح الكاش</a>
+                        </li>
+                        <li><a href="http://127.0.0.1:54007/migrate"><i class="fa fa-copy"></i>دمج الدتابيز</a></li>
+                                                <li><a href="http://127.0.0.1:54007/updateproductpricepersent"><i class="fa fa-percent"></i>تطبيق
+                                نسبة زيادة السعر</a></li>
+                        <li><a class="showAlertWarning" href="http://127.0.0.1:54007/cleanDB"><i
+                                    class="fa fa-trash-o"></i>مسح كل البيانات </a></li>
+                    </ul>
+                </li>
+                    </ul>
+    </section>
+    <!-- /.sidebar -->
+</aside>
+        <!-- Content Wrapper. Contains page content -->
+        <div  class="content-wrapper">
+        	<div style=" overflow: auto; width: 100%;">
+                    <!-- Content Header (Page header) -->
+        <section class="content-header">
+            <h1>
+                حركات اليوم                 <small></small>
+                <a data-toggle="modal" data-target="#addPersonModal"  href="http://127.0.0.1:54007/closeshift" class="btn btn-success pull-right">تقفيل الوردية</a>
+            </h1>
+        </section>
+
+        <!-- Main content -->
+        <section class="content">
+            <!-- Info boxes -->
+            <div class="row">
+
+                <div class="col-md-3 col-sm-6 col-xs-12">
+                    <div class="info-box">
+                        <span class="info-box-icon bg-green"><i class="fa fa-cart-plus"></i></span>
+
+                        <div class="info-box-content">
+                            <span class="info-box-text">مبيعات اليوم</span>
+                            <span style="width: 100%;margin-top: 5px;" class="info-box-number badge bg-green">
+                                0
+                            </span>
+                        </div>
+                        <!-- /.info-box-content -->
+                    </div>
+                    <!-- /.info-box -->
+                </div>
+                <!-- /.col -->
+                <div class="col-md-3 col-sm-6 col-xs-12">
+                    <div class="info-box">
+                        <span class="info-box-icon bg-yellow"><i class="fa fa-share-square-o"></i></span>
+
+                        <div class="info-box-content">
+                            <span class="info-box-text">مشتريات اليوم</span>
+                            <span style="width: 100%;margin-top: 5px;" class="info-box-number badge bg-yellow">0</span>
+                        </div>
+                        <!-- /.info-box-content -->
+                    </div>
+                    <!-- /.info-box -->
+                </div>
+                <div class="col-md-3 col-sm-6 col-xs-12">
+                    <div class="info-box">
+                        <span class="info-box-icon bg-red"><i class="fa fa-reply-all"></i></span>
+                        <div class="info-box-content">
+                            <span class="info-box-text">المرتجعات</span>
+                            <span style="width: 100%;margin-top: 5px;" class="info-box-number badge bg-red">
+                                0
+                            </span>
+                        </div>
+                        <!-- /.info-box-content -->
+                    </div>
+                    <!-- /.info-box -->
+                </div>
+                <!-- /.col -->
+
+                <!-- fix for small devices only -->
+                <div class="clearfix visible-sm-block"></div>
+
+                <div class="col-md-3 col-sm-6 col-xs-12">
+                    <div class="info-box">
+                        <span class="info-box-icon bg-aqua"><i class="fa fa-money"></i></span>
+
+                        <div class="info-box-content">
+                            <span class="info-box-text">المصروفات</span>
+                            <span style="width: 100%;margin-top: 5px;" class="info-box-number badge bg-aqua">0</span>
+                        </div>
+                        <!-- /.info-box-content -->
+                    </div>
+                    <!-- /.info-box -->
+                </div>
+                <!-- /.col -->
+
+            </div>
+
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="box">
+                        <!-- /.box-header -->
+                        <div class="box-body text-center" >
+                                                            <img style="width: 50%;"  src="http://127.0.0.1:8000/storage/logo.jpg">
+                                                        </div>
+                        <!-- ./box-body -->
+                    </div>
+                    <!-- /.box -->
+                </div>
+                <!-- /.col -->
+            </div>
+
+        </section>
+        <!-- /.content -->
+            </div>
+        </div>
+        <!-- /.content-wrapper -->
+
+        <footer id="page-footer"></footer>
+<footer class="main-footer">
+    <div class="pull-right hidden-xs">
+        <b>الإصدار الثانى</b>
+    </div>
+    <strong>جميع الحقوق محفوظة &copy; 2023
+         <a data-toggle="modal" data-target="#myModalDeveloper" href="http://127.0.0.1:54007/developer">تصميم وبرمجة م/ أشرف حسان </a>. 
+    </strong>
+</footer>
+
+    </div>
+    <div rel="flipInX" id="myModal" class="modal" style="overflow-x:hidden;overflow-y: scroll;z-index: 100000;"
+    role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-body">
+                <p class="text-center">
+                <div class="fa-3x text-center">
+                    <i class="fa fa-cog fa-spin"></i>
+                    جارى التحميل ...                </div>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+<div rel="flipInY" id="myModalDeveloper" class="modal" style="overflow-x:hidden;overflow-y: scroll;" role="dialog"
+    aria-labelledby="myModalLabel">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-body">
+                <p class="text-center">
+                <div class="fa-3x text-center">
+                    <i class="fa fa-cog fa-spin"></i>
+                    جارى التحميل ...                </div>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+<div rel="fadeInDown" id="addPersonModal" class="modal" style="overflow:auto;" role="dialog"
+    aria-labelledby="myModalLabel">
+    <div class="modal-dialog" style="width: 70%;">
+        <div class="modal-content">
+            <div class="modal-body">
+                <p class="text-center">
+                <div class="fa-3x text-center">
+                    <i class="fa fa-cog fa-spin"></i>
+                    جارى التحميل ...                </div>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- jQuery 2.2.3 -->
+<script src="http://127.0.0.1:54007/front/plugins/jQuery/jquery-2.2.3.min.js"></script>
+<!-- Bootstrap 3.3.6 -->
+<script src="http://127.0.0.1:54007/front/bootstrap/js/bootstrap.min.js"></script>
+
+<script src="http://127.0.0.1:54007/front/plugins/typeahead/bloodhound.min.js"></script>
+<script src="http://127.0.0.1:54007/front/plugins/typeahead/typeahead.jquery.js"></script>
+<!-- FastClick -->
+<script src="http://127.0.0.1:54007/front/plugins/fastclick/fastclick.js"></script>
+<!-- AdminLTE App -->
+<script src="http://127.0.0.1:54007/front/dist/js/app.min.js"></script>
+<!-- Sparkline -->
+
+<!-- jvectormap -->
+
+
+<!-- SlimScroll 1.3.0 -->
+<script src="http://127.0.0.1:54007/front/plugins/slimScroll/jquery.slimscroll.min.js"></script>
+
+
+<script src="http://127.0.0.1:54007/front/plugins/select2/select2.full.min.js"></script>
+<!-- bootstrap datepicker -->
+<script src="http://127.0.0.1:54007/front/plugins/datepicker/bootstrap-datepicker.js"></script>
+<!-- bootstrap color picker -->
+<script src="http://127.0.0.1:54007/front/plugins/slimScroll/jquery.slimscroll.min.js"></script>
+<!-- iCheck 1.0.1 -->
+<script src="http://127.0.0.1:54007/front/plugins/iCheck/icheck.min.js"></script>
+<script src="http://127.0.0.1:54007/front/datepicker-ar.js"></script>
+
+<!-- DataTables -->
+
+
+<script type="text/javascript" language="javascript"
+    src="http://127.0.0.1:54007/front/plugins/datatables2/jquery.dataTables1.10.19.min.js"></script>
+<script src="http://127.0.0.1:54007/front/plugins/datatables2/dataTables.bootstrap.min.js"></script>
+<script type="text/javascript" src="http://127.0.0.1:54007/front/plugins/datatables2/dataTables.buttons.min.js"></script>
+<script type="text/javascript" src="http://127.0.0.1:54007/front/plugins/datatables2/buttons.flash.min.js"></script>
+<script src="http://127.0.0.1:54007/front/plugins/datatables2/jszip.min.js" type="text/javascript"></script>
+<script src="http://127.0.0.1:54007/front/plugins/datatables2/buttons.html5.min.js" type="text/javascript"></script>
+<script src="http://127.0.0.1:54007/front/plugins/datatables2/buttons.print.js" type="text/javascript"></script>
+
+<script src="http://127.0.0.1:54007/front/plugins/datatables2/dataTables.fixedHeader.min.js" type="text/javascript"></script>
+<script src="http://127.0.0.1:54007/front/plugins/datatables2/dataTables.responsive.min.js" type="text/javascript"></script>
+<script src="http://127.0.0.1:54007/front/plugins/datatables2/responsive.bootstrap.min.js" type="text/javascript"></script>
+
+
+
+<script src="http://127.0.0.1:54007/front/toastr/toastr.min.js"></script>
+<script src="http://127.0.0.1:54007/front/bootstrap/js/validator.js" type="text/javascript"></script>
+<script src="http://127.0.0.1:54007/front/sweetalert.min.js" type="text/javascript"></script>
+
+<script src="http://127.0.0.1:54007/front/pdf/jspdf.min.js"></script>
+<script src="http://127.0.0.1:54007/front/pdf/html2canvas.min.js"></script>
+<script>
+    function getPriceWithoutTax(originalPrice) {
+        var tax = parseFloat("0");
+        originalPrice = parseFloat(originalPrice);
+        tax = tax / 100;
+        var taxplusone = 1 + tax;
+        orignalValue = originalPrice / taxplusone;
+        var taxvalue = orignalValue * tax;
+        var value = originalPrice - taxvalue;
+        value = parseFloat(value).toFixed(2);
+        return value;
+    }
+
+    function getUrlVars() {
+        var vars = [],
+            hash;
+        var hashes = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');
+        for (var i = 0; i < hashes.length; i++) {
+            hash = hashes[i].split('=');
+            vars.push(hash[0]);
+            vars[hash[0]] = hash[1];
+        }
+        return vars;
+    }
+    var curday = function(sp) {
+        var date = "";
+        var from = getUrlVars()['fromdate'];
+        var to = getUrlVars()['todate'];
+
+        if (from != undefined && from) {
+            date = from + " | " + to;
+        } else {
+            today = new Date();
+            var dd = today.getDate();
+            var mm = today.getMonth() + 1; //As January is 0.
+            var yyyy = today.getFullYear();
+
+            if (dd < 10) dd = '0' + dd;
+            if (mm < 10) mm = '0' + mm;
+            date = (dd + sp + mm + sp + yyyy);
+        }
+        return date;
+    };
+    if ($('.dataTableList').length) {
+
+        function formatQueryString(d) {
+            var info = $('.dataTableList').DataTable().page.info();
+            d.fromdate = $("#fromdate").val();
+            d.todate = $("#todate").val();
+            d.priceType = $("#priceType").val();
+            d.client_id = $("#client_id").val();
+            d.pageDisplayStart = (info.page) * info.length;
+            return d;
+        }
+        var startDisplay = 0;
+                var table = $('.dataTableList').DataTable({
+            dom: 'Blfrtip', //Blfrtip if need to show lengthMenu Bfrtip
+            pageLength: 25,
+            displayStart: startDisplay,
+            //responsive: true,
+            lengthMenu: [
+                [25, 50, 100, 200, 500, 800, -1],
+                [25, 50, 100, 200, 500, 800, "الكل"]
+            ],
+            //select: true,
+            //"order": [[ 0, "DESC" ]],
+            "language": {
+                "url": "http://127.0.0.1:54007/front/plugins/datatables2/Arabic.json"
+            },
+            //"order": [[0, "desc" ]],
+            buttons: [
+                //{ extend:'copy',text: 'نسخ' },
+                {
+                    extend: 'excel',
+                    text: "تحميل إكسيل",
+                    title: "قائمة " + document.title,
+                    exportOptions: {
+                        columns: 'th:not(:last-child)'
+                    },
+                },
+                {
+                    extend: 'print',
+                    footer: true,
+                    text: "طباعة",
+                    title: '',
+                    repeatingHead: {
+                        logo: "/storage/logo.jpg",
+                        //logoPosition: 'left',
+                        logoStyle: 'width:180px;margin-right: 10px; margin-top: -5px;position: absolute;top:35px;left:10px;',
+                        title: '<div style="font-weight: bold;width:100%"><div style="float:right;"><h4 style="line-height: 30px;">ناصـــر لاستيراد وتجارة الأدوات الصحية &lt;/br&gt; أولاد الحاج/ عصــــام الشنـاوي<br/>العنوان : منشأة الأخوه-طريق أجا-السنبلاوين<br/>التليفون : 01119999841 - 01029999967<br/>تاريخ الطباعه: ' +
+                            curday('-') + '<br/> مسئول الطباعه: أشرف</h4></div>' +
+                            '<h4 style="font-weight: bold;width:75%" >قائمة ' + document.title +
+                            '</h4></div>',
+                    },
+                    exportOptions: {
+                        stripHtml: false,
+                        columns: 'th:not(:last-child)'
+                    },
+                    customize: function(win) {
+                        var tit = $(win.document.body).find('.boxTiT').html();
+                        if (tit != undefined)
+                            $(win.document.body).find('h4:last').after('<h4 class="text-center">' +
+                                tit + '</h4>');
+                        $(win.document.body).find('table').css('direction', 'rtl');
+
+                        /* setTimeout(function () {
+                             win.print();
+                         }, 300);
+                         return true;*/
+                    },
+                    action: function(e, dt, button, config) {
+                        $("head").append(
+                            '<style>@media  print { html, body {overflow: hidden; } } </style>');
+                        $.fn.dataTable.ext.buttons.print.action(e, dt, button, config);
+                        /*setTimeout(function(){
+                            $.fn.dataTable.ext.buttons.print.action(e, dt, button, config);
+                        }, 1000);*/
+                    }
+                }
+            ],
+            /* "columnDefs": [ {
+                 "targets": 'no-sort',
+                 "orderable": false,
+             } ],*/
+            processing: '<i class="fa fa-spinner fa-spin fa-3x fa-fw"></i><span class="sr-only">Loading...</span> ',
+            serverSide: true,
+            deferRender: true,
+            orderClasses: false,
+            displayStart: startDisplay,
+            ajax: {
+                url: pageUrl,
+                data: function(d) {
+                    return formatQueryString(d);
+                },
+                /*data: function (d) {
+                    d.order[0].column = d.columns[d.order[0].column].name;
+
+                },*/
+                "dataSrc": function(json) {
+                    if ($("#sumPriceOne").length && json.sumPriceOne) {
+                        var t = parseFloat(json.sumPriceOne).toFixed(2);
+                        $("#sumPriceOne").html(t);
+                    } else {
+                        $("#sumPriceOne").closest('.bg-yellow').hide();
+                    }
+                    if ($("#sumPriceOneGomla").length && json.sumPriceOneGomla) {
+                        var t = parseFloat(json.sumPriceOneGomla).toFixed(2);
+                        $("#sumPriceOneGomla").html(t);
+                    }
+                    if ($("#sumPriceOneGomlaGomla").length && json.sumPriceOneGomlaGomla) {
+                        var t = parseFloat(json.sumPriceOneGomlaGomla).toFixed(2);
+                        $("#sumPriceOneGomlaGomla").html(t);
+                    }
+                    if ($("#totalOrder").length && json.totalOrder) {
+                        var t = parseFloat(json.totalOrder).toFixed(2);
+                        $("#totalOrder").html(t);
+                        $(".totalorder").html(t);
+                    }
+                    if ($(".totalpaid").length && json.totalpaid) {
+                        var t = parseFloat(json.totalpaid).toFixed(2);
+                        $(".totalpaid").html(t);
+                    }
+                    if ($(".totaldue").length && json.totaldue) {
+                        var t = parseFloat(json.totaldue).toFixed(2);
+                        $(".totaldue").html(t);
+                    }
+                    if ($(".totaldiscount").length && json.dicount_value) {
+                        var t = parseFloat(json.dicount_value).toFixed(2);
+                        $(".totaldiscount").html(t);
+                    }
+                    if ($(".cashOrders").length && json.cashOrders) {
+                        var t = parseFloat(json.cashOrders).toFixed(2);
+                        $(".cashOrders").html(t);
+                    }
+                    if ($(".postPaidOrders").length && json.postPaidOrders) {
+                        var t = parseFloat(json.postPaidOrders).toFixed(2);
+                        $(".postPaidOrders").html(t);
+                    }
+                    if ($(".visaOrders").length && json.visaOrders) {
+                        var t = parseFloat(json.visaOrders).toFixed(2);
+                        $(".visaOrders").html(t);
+                    }
+                    if ($(".linkTransferOrders").length && json.linkTransferOrders) {
+                        var t = parseFloat(json.linkTransferOrders).toFixed(2);
+                        $(".linkTransferOrders").html(t);
+                    }
+                    return json.data;
+                }
+            },
+            columns: columns
+        });
+        new $.fn.dataTable.FixedHeader(table);
+    }
+    if ($('#dataList').length || $('.dataTableTT').length) {
+        var table = $('#dataList,.dataTableTT').DataTable({
+            //"ajax": '',
+            dom: 'Blfrtip', //Blfrtip if need to show lengthMenu
+            pageLength: 25,
+            lengthMenu: [
+                [25, 50, 100, 500, -1],
+                [25, 50, 100, 500, "الكل"]
+            ],
+            responsive: true,
+            select: true,
+            processing: false,
+            "language": {
+                "url": "http://127.0.0.1:54007/front/plugins/datatables2/Arabic.json"
+            },
+            buttons: [
+                //{ extend:'copy',text: 'نسخ' },
+                {
+                    extend: 'excel',
+                    text: "تحميل إكسيل",
+                    title: "قائمة " + document.title,
+                    exportOptions: {
+                        columns: 'th:not(:last-child)'
+                    },
+                },
+                {
+                    extend: 'print',
+                    footer: true,
+                    text: "طباعة",
+                    title: '',
+                    repeatingHead: {
+                        logo: "/storage/logo.jpg",
+                        //logoPosition: 'left',
+                        logoStyle: 'width:180px;margin-right: 10px; margin-top: -5px;position: absolute;top:35px;left:10px;',
+                        title: '<div style="font-weight: bold;width:100%"><div style="float:right;"><h4 style="line-height: 30px;">ناصـــر لاستيراد وتجارة الأدوات الصحية &lt;/br&gt; أولاد الحاج/ عصــــام الشنـاوي<br/>العنوان : منشأة الأخوه-طريق أجا-السنبلاوين<br/>التليفون : 01119999841 - 01029999967<br/>تاريخ الطباعه: ' +
+                            curday('-') + '<br/> مسئول الطباعه: أشرف</h4></div>' +
+                            '<h4 style="font-weight: bold;margin-right:400px;" >قائمة ' +
+                            document.title + '</h4></div>',
+                    },
+                    exportOptions: {
+                        stripHtml: false,
+                        columns: 'th:not(:last-child)'
+                    },
+                    customize: function(win) {
+                        var tit = $(win.document.body).find('.boxTiT').html();
+                        if (tit != undefined)
+                            $(win.document.body).find('h4:last').after('<h4 class="text-center">' +
+                                tit + '</h4>');
+                        $(win.document.body).find('table').css('direction', 'rtl');
+
+                        /* setTimeout(function () {
+                             win.print();
+                         }, 300);
+                         return true;*/
+                    },
+                    action: function(e, dt, button, config) {
+                        $("head").append(
+                            '<style>@media  print { html, body {overflow: hidden; } } </style>');
+                        $.fn.dataTable.ext.buttons.print.action(e, dt, button, config);
+                        /*setTimeout(function(){
+                            $.fn.dataTable.ext.buttons.print.action(e, dt, button, config);
+                        }, 1000);*/
+                    }
+                }
+            ],
+            "columnDefs": [{
+                "targets": 'no-sort',
+                "orderable": false,
+            }],
+        });
+        new $.fn.dataTable.FixedHeader(table);
+        var page = "";
+        if (page) {
+            setTimeout(function() {
+                $('a[data-dt-idx="' + page + '"]').trigger('click');
+            }, 500);
+        }
+
+    }
+            var current = window.location.href;
+    $("ul.sidebar-menu li.active").removeClass('active');
+    var li = $('a[href="' + current + '"]').closest('li');
+    var parent = li.parents('.treeview-menu');
+    if (parent.length) {
+        parent.closest('li').addClass('active');
+    }
+    if (li.length) {
+        li.addClass('active');
+    } else {
+        $("#homeLi").addClass('active');
+    }
+
+    $(document).on('hidden.bs.modal', function(e) {
+        $(e.target).removeData('bs.modal');
+    });
+
+    $('.modal-fullscreen .modal-content').slimScroll({
+        height: ($(window.top).height()) + 'px',
+        alwaysVisible: true
+    });
+
+    $('.modal').on('show.bs.modal', function(e) {
+        var animation = $(this).attr('rel');
+        $(this).find('.modal-dialog').attr('class', 'modal-lg modal-dialog animated ' + animation);
+    });
+
+
+    function downloadPdf($btn) {
+        $('canvas').remove();
+        $(".hideprint").hide();
+        if ($btn.hasClass('disabled')) return false;
+        $btn.attr('data-loading-text', "<i class='fa fa-circle-o-notch fa-spin'></i> جارى التحميل ....");
+        $btn.button('loading');
+        var container = document.querySelector('.content');
+        html2canvas(container).then(canvas => {
+            let doc = new jsPDF({
+                orientation: 'p',
+                unit: 'px',
+                format: 'a4'
+            });
+            doc.width = doc.internal.pageSize.width;
+            doc.height = doc.internal.pageSize.height;
+            doc.margin = {
+                horiz: 5,
+                vert: 20
+            };
+            doc.work = {
+                width: doc.width - (doc.margin.horiz * 2),
+                height: doc.height - (doc.margin.vert * 2)
+            }
+            doc.setFontSize(9);
+            doc.setFontType("bold");
+
+            let data = {
+                width: container.offsetWidth,
+                height: container.offsetHeight,
+                ctx: canvas.getContext('2d'),
+                page: {}
+            };
+            data.page.width = data.width;
+            data.page.height = (data.width * doc.work.height) / doc.work.width;
+
+            const getData = function(imgData, width, height) {
+                let oCanvas = document.createElement('canvas');
+                oCanvas.width = width;
+                oCanvas.height = height;
+                let oCtx = oCanvas.getContext('2d');
+                oCtx.putImageData(imgData, 0, 0);
+                return oCanvas.toDataURL('image/png');
+            };
+
+            /**/
+            let oImgData = null;
+            let dataURL = null;
+            let pages = Math.ceil(data.height / data.page.height);
+            for (let i = 0; i < pages; i++) {
+                if (i != 0) {
+                    doc.addPage();
+                }
+                oImgData = data.ctx.getImageData(0, data.page.height * i, data.page.width, data.page.height);
+                dataURL = getData(oImgData, data.page.width, data.page.height);
+                doc.addImage(dataURL, 'PNG', doc.margin.horiz, doc.margin.vert, doc.work.width, doc.work
+                    .height);
+            }
+            var width = doc.internal.pageSize.getWidth();
+            var height = doc.internal.pageSize.getHeight();
+            const pagesCount = doc.internal.getNumberOfPages();
+            for (let j = 1; j < pagesCount + 1; j++) {
+                let horizontalPos = width / 2; //Can be fixed number
+                let verticalPos = height - 10; //Can be fixed number
+                doc.setPage(j);
+                doc.text(`${j} of ${pagesCount}`, horizontalPos, verticalPos, {
+                    align: 'center'
+                });
+            }
+            /**/
+            var pageTitle = document.title || "Untitled";
+            doc.save(pageTitle + ".pdf");
+
+            $btn.button('reset');
+
+        });
+
+        $(".hideprint").show();
+    }
+    $(document).on('click', '#pdf-button', function(e) {
+        e.preventDefault();
+        var $btn = $(this);
+        downloadPdf($btn);
+    });
+    $(document).on("click", ".showAlertWarning", function(e) {
+        e.preventDefault();
+        var btn = $(this);
+        var url_ = $(this).attr('href');
+        swal({
+                title: "تحذير!",
+                text: "هل أنت متأكد من الحذف ؟",
+                type: "warning",
+                showCancelButton: true,
+                confirmButtonColor: "#DD4140",
+                closeOnConfirm: false,
+                showLoaderOnConfirm: true,
+                cancelButtonText: "إلغاء",
+                confirmButtonText: "نعم متأكد",
+            },
+            function() {
+                $.ajax({
+                    url: url_,
+                    type: 'GET',
+                    success: function(result) {
+                        //swal({title:"نجاح العملية!", text:"تمت العملية بنجاح",type:"success",confirmButtonText: "تمام"});
+                        if (result == "failed") {
+                            swal({
+                                title: "front.error!",
+                                text: "حذف",
+                                type: "error",
+                                confirmButtonText: "تمام"
+                            });
+                        } else {
+                            swal({
+                                title: "نجاح العملية!",
+                                text: "تمت الإضافه بنجاح",
+                                type: "success",
+                                confirmButtonText: "تمام"
+                            });
+                            var link = document.createElement('a');
+                            link.style.display = 'none';
+                            link.href = result;
+                            // Add the link to the DOM
+                            document.body.appendChild(link);
+                            // Trigger the download
+                            link.click();
+                            // Remove the link from the DOM
+                            document.body.removeChild(link);
+                            //location.reload();
+                        }
+
+                        //window.location.href = newLink;
+                        //window.location.reload();
+
+                    }
+                });
+            });
+    });
+
+    $(document).on("click", ".remove-record", function(e) {
+        e.preventDefault();
+        var btn = $(this);
+        var url_ = $(this).attr('data-url');
+        swal({
+                title: "هل أنت متأكد من الحذف ؟ ",
+                text: "سوف تفقد البيانات ولن تستطيع استراجعها",
+                type: "warning",
+                showCancelButton: true,
+                confirmButtonColor: "#DD4140",
+                closeOnConfirm: false,
+                showLoaderOnConfirm: true,
+                cancelButtonText: "إلغاء",
+                confirmButtonText: "نعم متأكد",
+            },
+            function() {
+                $.ajax({
+                    url: url_,
+                    type: 'POST',
+                    data: {
+                        _token: "QB8b7nlKTbUpFUSANl6BgrI4ig7SxJtRpZvwyp9m",
+                        _method: 'DELETE'
+                    },
+                    success: function(result) {
+                        //alert(result);
+                        if (result == "transaction deleted") {
+                            window.location.reload();
+                        } else if (result == 'done') {
+                            //btn.closest('tr').fadeOut();
+                            swal({
+                                title: "حذف!",
+                                text: "تمت عملية الحذف بنجاح",
+                                type: "success",
+                                confirmButtonText: "نعم متأكد"
+                            });
+                            table.row(btn.closest('tr')).remove().draw();
+                        } else {
+                            swal({
+                                title: "خطأ!",
+                                text: "لا يمكنك الحذف!",
+                                type: "error",
+                                confirmButtonText: "نعم متأكد"
+                            });
+                        }
+                    }
+                });
+            });
+    });
+
+    function PrintElem(url) {
+        window.open(url, 'theFrame');
+        window.focus();
+    }
+
+    function PrintDiv(elem) {
+        var mywindow = window.open('', 'PRINT', 'height=400,width=600');
+
+        mywindow.document.write('<html><head><title>' + document.title + '</title>');
+        mywindow.document.write('</head><body >');
+        mywindow.document.write(document.getElementById(elem).innerHTML);
+        mywindow.document.write('</body></html>');
+
+        mywindow.document.close(); // necessary for IE >= 10
+        mywindow.focus(); // necessary for IE >= 10*/
+
+        mywindow.print();
+        mywindow.close();
+
+        return true;
+    }
+        $('body').on('submit', 'form', function(e) {
+        //e.preventDefault();
+        var $btn = $(this).find(':submit');
+        if ($btn.hasClass('disabled')) return false;
+        $btn.attr('data-loading-text', "<i class='fa fa-circle-o-notch fa-spin'></i> جارى الحفظ ...");
+        $btn.button('loading');
+        setTimeout(function() {
+            $btn.button('reset');
+        }, 3000);
+    });
+</script>
+
+
+    <iframe style="display: none;height: 2480px;" name="theFrame"></iframe>
+    
+</body>
+</html>
